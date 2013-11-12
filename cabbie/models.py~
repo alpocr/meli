@@ -33,7 +33,7 @@ class Car(models.Model):
 		self.save()
 
 	#Envia la sennal para llamar 'update_location'
-	#post_save.connect(update_location, sender=Car)
+	post_save.connect(update_location, sender=Car)
 
 
 # Este es el tipo de carro, que puede ser
