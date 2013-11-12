@@ -12,7 +12,7 @@ MANAGERS = ADMINS
 
 PROJECT_ROOT = os.path.dirname(__file__)
 
-GCM_APIKEY = "<api_key>"
+GCM_APIKEY = "AIzaSyBrJhkvF_RLmvsKiWuX63Fw82uQ1DCTLTQ"
 
 DATABASES = {
     'default': {

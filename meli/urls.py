@@ -46,11 +46,12 @@ urlpatterns = patterns('',
     url(r'^company/', include('company.urls')),
 
     url(r'^$', direct_to_template, { 'template': 'index.html' }, 'index'),
-    #url(r'', include('gcm.urls')),
+    url(r'^gcm/', include('gcm.urls')),
     url(r'^admin/', include(admin.site.urls)),
     url(r'^accounts/', include('registration.backends.default.urls')),
 
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': settings.MEDIA_ROOT}),
+
     url(r'^api/', include(router.urls)),
     url(r'^api/', include('rest_framework.urls', namespace='rest_framework')),
 )
