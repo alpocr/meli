@@ -21,6 +21,7 @@ class Car(models.Model):
 	number = models.CharField(max_length=20)
 	type_car = models.ForeignKey('TypeCar',null=True, blank=True)
 	reader_card = models.BooleanField(default=True)
+	last_location = models.CharField(max_length=200, null=True, blank=True)
 
 	def __unicode__(self):
 		return self.number
